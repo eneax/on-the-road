@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "on-the-road",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Responsive travel agency website built with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Enea Xharja <https://github.com/eneax>",
   "dependencies": {
     "gatsby": "^2.13.12",
     "gatsby-image": "^2.2.4",
