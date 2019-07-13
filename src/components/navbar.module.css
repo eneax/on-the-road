@@ -1,0 +1,12 @@
+.navbar {
+  background-color: antiquewhite;
+}
+
+.navbar h1 {
+  color: purple;
+}
+
+.links {
+  color: green;
+  font-size: 2rem;
+}
