@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
 import Banner from "../components/banner"
+import About from "../components/about"
 
 
 const IndexPage = () => (
@@ -24,6 +25,8 @@ const IndexPage = () => (
         </Link>
       </Banner>
     </Hero>
+
+    <About />
   </Layout>
 )
 
