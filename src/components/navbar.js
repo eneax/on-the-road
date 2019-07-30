@@ -13,8 +13,6 @@ const Navbar = () => {
     setNav(isOpen => !isOpen)
   }
 
-  console.log(isOpen);
-
   return (
     <div className={styles.navbar}>
       <div className={styles.navCenter}>
