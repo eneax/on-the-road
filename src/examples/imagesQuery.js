@@ -13,9 +13,10 @@ const getImages = graphql`
           }
         }
       }
+      # with fluid (by default 800), the image will always be the size of the parent container
       fluid: file(relativePath: {eq: "blogBcg.jpeg"}) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 100) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
@@ -42,6 +43,10 @@ const ImagesQuery = () => {
       <article>
         <h3>Fluid Image - Svg</h3>
         <Img fluid={data.fluid.childImageSharp.fluid} />
+
+        <div className='fluid-example'>
+          <Img fluid={data.fluid.childImageSharp.fluid} />
+        </div>
       </article>
     </Wrapper>
   )
@@ -66,6 +71,10 @@ const Wrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1rem;
+  }
+
+  .fluid-example {
+    width: 50%;
   }
 `
 
