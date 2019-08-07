@@ -3,10 +3,10 @@ import styled from 'styled-components'
 import BackgroundImage from 'gatsby-background-image'
 
 
-const HeroStyled = ({ img, classname, children, home}) => {
+const HeroStyled = ({ img, className, children, home}) => {
   return (
     <BackgroundImage 
-      className={classname}
+      className={className}
       fluid={img} // query from graphql
       home={home} // BackgroundImage for homepage will be bigger than the others
     >
@@ -16,16 +16,12 @@ const HeroStyled = ({ img, classname, children, home}) => {
 }
 
 export default styled(HeroStyled)`
-  min-height: ${
-    (props) => props.home
-      ? 'calc(100vh - 62px)'
-      : '50vh'
-  };
-  background: ${
-    (props) => props.home 
-      ? 'linear-gradient(rgba(63, 208, 212, 0.7), rgba(0, 0, 0, 0.7))'
-      : 'none'
-  };
+  min-height: ${(props) => (
+    props.home ? 'calc(100vh - 62px)' : '50vh'
+  )};
+  background: ${(props) => (
+    props.home ? 'linear-gradient(rgba(63, 208, 212, 0.7), rgba(0, 0, 0, 0.7))' : 'none'
+  )};
   background-position: center;
   background-size: cover;
   opacity: 1 !important;
