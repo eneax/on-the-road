@@ -24,7 +24,7 @@ export default styled(HeroStyled)`
   )};
   background-position: center;
   background-size: cover;
-  opacity: 1 !important;
+  opacity: 1 !important;  /* otherwise there is no linear-gradient */
   display: flex;
   align-items: center;
   justify-content: center;
