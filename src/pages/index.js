@@ -1,5 +1,6 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -21,12 +22,13 @@ const IndexPage = ({ data }) => (
         title="Keep Exploring" 
         info='Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, obcaecati numquam! Repellendus sit rem.'
       >
-        <Link 
+        <AniLink 
+          fade
           to='/tours'
           className='btn-white'
         >
           explore tours
-        </Link>
+        </AniLink>
       </Banner>
     </HeroStyled>
 
