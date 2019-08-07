@@ -31,5 +31,7 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
     `gatsby-plugin-styled-components`,
+    // for a nice page transition effect
+    `gatsby-plugin-transition-link`
   ],
 }
