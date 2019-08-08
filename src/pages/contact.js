@@ -4,8 +4,9 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HeroStyled from "../components/heroStyled"
+import Contact from "../components/contact"
 
-const Contact = ({ data }) => (
+const Contacts = ({ data }) => (
   <Layout>
     <SEO title="Contact" />
 
@@ -14,6 +15,8 @@ const Contact = ({ data }) => (
     >
       <h1>Contact</h1>
     </HeroStyled>
+
+    <Contact />
     
   </Layout>
 )
@@ -30,4 +33,4 @@ export const query = graphql`
   }
 `
 
-export default Contact
+export default Contacts
