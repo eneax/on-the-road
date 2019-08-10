@@ -44,6 +44,8 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-styled-components`,
     // for a nice page transition effect
-    `gatsby-plugin-transition-link`
+    `gatsby-plugin-transition-link`,
+    // Adds the Prisma playground to your gatsby dev server.
+    `gatsby-plugin-playground`,
   ],
 }
