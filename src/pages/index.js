@@ -8,6 +8,7 @@ import HeroStyled from "../components/heroStyled"
 import Banner from "../components/banner"
 import About from "../components/about"
 import Services from "../components/services"
+import ToursFeatured from "../components/toursFeatured"
 
 
 const IndexPage = ({ data }) => (
@@ -34,6 +35,7 @@ const IndexPage = ({ data }) => (
 
     <About />
     <Services />
+    <ToursFeatured />
   </Layout>
 )
 
