@@ -4,8 +4,9 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HeroStyled from "../components/heroStyled"
+import Tours from "../components/tours"
 
-class Tours extends Component {
+class tours extends Component {
   render() {
     return (
       <Layout>
@@ -16,6 +17,8 @@ class Tours extends Component {
         >
           <h1>Tours</h1>
         </HeroStyled>
+
+        <Tours />
       </Layout>
     )
   }
@@ -34,4 +37,4 @@ export const query = graphql`
 `
 
 
-export default Tours
+export default tours
