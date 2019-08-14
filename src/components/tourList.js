@@ -4,7 +4,6 @@ import React, { Component } from 'react'
 import styles from './items.module.css'
 import Tour from './tour'
 import Title from './title'
-import { node } from 'prop-types';
 
 export default class TourList extends Component {
   state = {
