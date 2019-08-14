@@ -27,8 +27,7 @@ const getTours = graphql`
 `
 
 const Tours = () => {
-  const tours = useStaticQuery(getTours)
-  console.log(tours)
+  const { tours } = useStaticQuery(getTours)
 
   return (
     <TourList tours={tours} />
