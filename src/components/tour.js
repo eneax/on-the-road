@@ -1,4 +1,5 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import { FaMap } from 'react-icons/fa'
@@ -7,11 +8,34 @@ import PropTypes from 'prop-types'
 import styles from './tour.module.css'
 
 
+const getMainImage = graphql`
+  query{
+    file(relativePath: {eq: "defaultBcg.jpeg"}){
+      childImageSharp{
+        fluid{
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`
+
+
 const Tour = ({ tour }) => {
+  const data = useStaticQuery(getMainImage)
+  const img = data.file.childImageSharp.fluid
+
   const { name, price, country, days, slug, images } = tour
   
   // set first img in the array as main img
-  let mainImage = images[0].fluid
+  let mainImage = images ? images[0].fluid : img
+  // let mainImage
+  // if (images) {
+  //   mainImage = images[0].fluid
+  // } else {
+  //   mainImage = img
+  // }
+
 
   return (
     <article className={styles.tour}>
