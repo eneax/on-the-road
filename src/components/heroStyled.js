@@ -1,13 +1,30 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
+
 import BackgroundImage from 'gatsby-background-image'
 
 
+const getDefaultBcgImg = graphql`
+  {
+    defaultBcg: file(relativePath: {eq: "defaultBcg.jpeg"}) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`
+
+
 const HeroStyled = ({ img, className, children, home}) => {
+  const data = useStaticQuery(getDefaultBcgImg)
+  
   return (
     <BackgroundImage 
       className={className}
-      fluid={img} // query from graphql
+      fluid={img || data.childImageSharp.fluid} // query from graphql
       home={home} // BackgroundImage for homepage will be bigger than the others
     >
       {children}
