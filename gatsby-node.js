@@ -25,38 +25,3 @@ exports.createPages = async({ graphql, actions }) => {
     })
   })
 }
-
-
-
-/*
-
-* query
-query($slug: String!) {
-  contentfulTour(slug: {eq:$slug}) {
-    name
-    price
-    country
-    days
-    start(formatString: "dddd MMMM Do, YYYY")
-    description{
-      description
-    }
-    journey{
-      day
-      id
-    }
-    images{
-      fluid{
-        src
-      }
-    }
-  }
-}
-
-
-* query variable
-{
-  "slug": "walk-japan" 
-}
-
-*/
