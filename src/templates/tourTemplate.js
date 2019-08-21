@@ -75,7 +75,7 @@ export const query = graphql`
       }
       journey{
         day
-        id
+        info
       }
       images{
         fluid{
