@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HeroStyled from "../components/heroStyled"
+import BlogList from "../components/blogList"
 
 const Blog = ({ data }) => (
   <Layout>
@@ -14,6 +15,8 @@ const Blog = ({ data }) => (
     >
       <h1>Blog</h1>
     </HeroStyled>
+
+    <BlogList />
 
     <Link to="/">Back home</Link>
   </Layout>
