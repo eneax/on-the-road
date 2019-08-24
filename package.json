@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Enea Xharja <https://github.com/eneax>",
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^13.4.0",
     "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.13.12",
     "gatsby-background-image": "^0.8.3",
