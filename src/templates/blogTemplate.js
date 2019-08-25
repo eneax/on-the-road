@@ -19,6 +19,18 @@ const BlogTemplate = ({ data }) => {
             <p>image provided by john doe</p>
           </div>
         )
+      },
+      "embedded-entry-block": (node) => {
+        const {title, image, text} = node.data.target.fields
+
+        return (
+          <div>
+            <p>another post: </p>
+            <h1>{title['en-US']}</h1>
+            <img width='400' src={image['en-US'].fields.file['en-US'].url} alt=""/>
+            {documentToReactComponents(text['en-US'])}
+          </div>
+        )
       }
     }
   }
