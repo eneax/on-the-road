@@ -7,6 +7,9 @@ module.exports = {
     title: `On the Road`,
     description: `It's time to hit the road for some adventures!`,
     author: `@eneax`,
+    twitterUsername: `@eneaxharja`,
+    image: `/defaultBcg.jpeg`,
+    siteUrl: `https://on-the-road.netlify.com`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
