@@ -10,22 +10,43 @@ import styles from './blog.module.css'
 
 const BlogListTemplate = (props) => {
   const { data } = props
+  const { currentPage, numPages } = props.pageContext
 
   return (
-    <section className={styles.blog}>
-      <Title title='latest' subtitle='posts' />
+    <Layout>
+      <section className={styles.blog}>
+        <Title title='latest' subtitle='posts' />
 
-      <div className={styles.center}>
-        {data.posts.edges.map(({node}) => {
-          return (
-            <BlogCard 
-              key={node.id}
-              blog={node}
-            />
-          )
-        })}
-      </div>
-    </section>
+        <div className={styles.center}>
+          {data.posts.edges.map(({node}) => {
+            return (
+              <BlogCard 
+                key={node.id}
+                blog={node}
+              />
+            )
+          })}
+        </div>
+
+        <section className={styles.links}>
+          {
+            // create array with 3 items and for each item we return a link to a page
+            Array.from({length: numPages}, (_,i) => {
+              return (
+                <AniLink 
+                  key={i} 
+                  fade 
+                  to={`/blogs/${i === 0 ? '' : i+1}`} 
+                  className={i+1 === currentPage ? `${styles.link} ${styles.active}` : `${styles.link}`}
+                >
+                  {i+1}
+                </AniLink>
+              )
+            })
+          }
+        </section>
+      </section>
+    </Layout>
   )
 }
 
