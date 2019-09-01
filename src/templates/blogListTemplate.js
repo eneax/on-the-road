@@ -10,7 +10,13 @@ import styles from './blog.module.css'
 
 const BlogListTemplate = (props) => {
   const { data } = props
+
   const { currentPage, numPages } = props.pageContext
+  const prevPage = (currentPage - 1 === 1) ? `/blogs` : `/blogs/${currentPage - 1}`
+  const nextPage = `/blogs/${currentPage + 1}`
+
+  const isFirst = currentPage === 1
+  const isLast = currentPage === numPages
 
   return (
     <Layout>
@@ -30,6 +36,12 @@ const BlogListTemplate = (props) => {
 
         <section className={styles.links}>
           {
+            !isFirst && (
+              <AniLink fade to={prevPage} className={styles.link}>Prev</AniLink>
+            )
+          }
+
+          {
             // create array with 3 items and for each item we return a link to a page
             Array.from({length: numPages}, (_,i) => {
               return (
@@ -43,6 +55,12 @@ const BlogListTemplate = (props) => {
                 </AniLink>
               )
             })
+          }
+          
+          {
+            !isLast && (
+              <AniLink fade to={nextPage} className={styles.link}>Next</AniLink>
+            )
           }
         </section>
       </section>
