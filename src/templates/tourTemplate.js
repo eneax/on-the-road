@@ -5,6 +5,7 @@ import {FaMoneyBillWave, FaMap} from 'react-icons/fa'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 import HeroStyled from '../components/heroStyled'
 import Day from '../components/day'
 import styles from './template.module.css'
@@ -17,6 +18,8 @@ const TourTemplate = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title={name} />
+
       <HeroStyled img={mainImage.fluid} />
       <section className={styles.template}>
         <div className={styles.center}>
