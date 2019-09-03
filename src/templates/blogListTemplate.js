@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 import BlogCard from '../components/blogCard'
 import Title from '../components/title'
 import styles from './blog.module.css'
@@ -20,6 +21,8 @@ const BlogListTemplate = (props) => {
 
   return (
     <Layout>
+      <SEO title='Blogs' />
+
       <section className={styles.blog}>
         <Title title='latest' subtitle='posts' />
 
