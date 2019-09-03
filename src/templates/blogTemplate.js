@@ -5,6 +5,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import styles from './blog.module.css'
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 
 const BlogTemplate = ({ data }) => {
@@ -37,6 +38,8 @@ const BlogTemplate = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title={title} />
+
       <section className={styles.blog}>
         <div className={styles.center}>
           <h1>{title}</h1>
