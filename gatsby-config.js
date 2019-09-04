@@ -48,5 +48,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     // for a nice page transition effect
     `gatsby-plugin-transition-link`,
+    // sitemap
+    `gatsby-plugin-sitemap`
   ],
 }
