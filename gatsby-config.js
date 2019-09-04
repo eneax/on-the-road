@@ -49,6 +49,15 @@ module.exports = {
     // for a nice page transition effect
     `gatsby-plugin-transition-link`,
     // sitemap
-    `gatsby-plugin-sitemap`
+    `gatsby-plugin-sitemap`,
+    // robots-txt
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: `https://on-the-road.netlify.com`,
+        sitemap: `https://on-the-road.netlify.com/sitemap.xml`,
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    }
   ],
 }
