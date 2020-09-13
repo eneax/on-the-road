@@ -1,7 +1,7 @@
 {
   "name": "on-the-road",
   "private": true,
-  "description": "Responsive travel agency website built with Gatsby",
+  "description": "Experimenting with Gatsby and Contentful",
   "version": "0.1.0",
   "author": "Enea Xharja <https://github.com/eneax>",
   "dependencies": {

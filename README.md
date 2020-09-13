@@ -1,3 +1,3 @@
-## On The Road | Travel Agency
+## On The Road
 
-Responsive travel agency website built with Gatsby.
+Experimenting with Gatsby and Contentful.

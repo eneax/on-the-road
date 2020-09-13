@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `On the Road`,
-    description: `It's time to hit the road for some adventures!`,
+    description: `Experimenting with Gatsby and Contentful`,
     author: `@eneax`,
     twitterUsername: `@eneaxharja`,
     image: `/defaultBcg.jpeg`,
